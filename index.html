@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html style="height: auto;" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths k-webkit k-webkit92"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PLIMS Search Reports</title>
+    <link rel="icon" type="image/jpg" href="https://www.preventine.org/Images/Logo.png">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <script src="./PLIMS Search Reports_files/modernizr"></script>
+
+    <script src="./PLIMS Search Reports_files/jquery"></script>
+
+    <link href="./PLIMS Search Reports_files/cssfile" rel="stylesheet">
+
+    <link href="./PLIMS Search Reports_files/adminlte" rel="stylesheet">
+
+    <link href="./PLIMS Search Reports_files/Site.css" rel="stylesheet">
+    <link href="./PLIMS Search Reports_files/css" rel="stylesheet">
+
+    <style type="text/css">
+        .k-grid td {
+            padding: 0.2em 0.2em 0.2em 0.5em !important;
+        }
+        .logo {
+            background-color: #ffed02 !important;
+        }
+        /*.dropdown:hover .dropdown-menu {
+            display: block;
+            left: 217px;
+            top: -2px;
+        }*/
+    </style>
+</head>
+<body class="skin-blue sidebar-mini" style="height: auto;">
+    
+        <div class="wrapper" style="height: auto;">
+            <header class="main-header">
+
+                <a href="https://www.preventine.org/" class="logo">
+                    <span class="logo-lg"><img src="./PLIMS Search Reports_files/PLIMS.PNG" style="width:200px"></span>
+                </a>
+                <nav class="navbar navbar-static-top">
+                    <a href="https://www.preventine.org/reports/SearchReport#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-brand">
+                        <ul class="nav navbar-nav">
+                            <li class="small">
+                                
+                                Centre: <span class="text-bold text-yellow">
+
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                                <li class="dropdown  user user-menu">
+                                    
+                                        <a href="https://www.preventine.org/Qms/RaisedQueries" data-toggle="tooltip" title="" data-placement="bottom" class="img-rounded  bg-yellow-gradient text-green" data-original-title="New Query"> 
+                                            
+                                    <i class="fa fa-comment-o text-bold "> Raise Query</i>
+                                            </a>
+                                    
+                                    
+                                </li>
+                            </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown  user user-menu">
+
+                                <a href="https://www.preventine.org/GdfDashboard/Index" data-toggle="tooltip" title="" data-placement="bottom" class="img-rounded  bg-orange-active text-black" data-original-title="Update Balance">
+
+                                    <i class="fa fa-comment-o text-bold "> Check Balance</i>
+                                </a>
+                                
+
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                             
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <li class="dropdown notifications-menu">
+                                <a href="https://www.preventine.org/GdfNotification/GetAvailablePickupsForCentre" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Pickup Time">
+                                    <i class="fa fa-truck"></i>
+                                    
+                                </a>
+                            </li>   
+                            <li class="dropdown notifications-menu">
+                                <a href="https://www.preventine.org/GdfNotification/GdfPriorityNotifications" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="Priority Notifications">
+                                    <i class="fa fa-flag-o"></i>
+                                    
+                                </a>
+                            </li>                            
+                            <li class="dropdown notifications-menu">
+                                <a href="https://www.preventine.org/GdfNotification/GdfNotifications" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="General Notifications">
+                                    <i class="fa fa-bell-o"></i>
+                                    
+                                </a>
+                            </li>
+                            <li class="dropdown notifications-menu">
+                                <a href="https://www.preventine.org/GdfNotification/GdfBroadcastNotifications" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="GD Messages">
+                                    <i class="fa fa-envelope-o"></i>
+                                    
+                                </a>
+                            </li>
+
+                                                    <li class="user user-menu">
+                            <a class="btn btn-flat" href="https://www.preventine.org/Home/Login">Log in</a>
+                        </li>
+                        <li>
+                            <a href="https://www.preventine.org/reports/SearchReport#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <form action="https://www.preventine.org/reports/SearchReport#" method="get" class="sidebar-form">
+                        <div class="input-group">
+                            <input type="text" name="q" class="form-control search-menu-box" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </section>
+            </aside>
+            <div class="content-wrapper" style="min-height: 493px;">
+                
+
+
+<style>
+    .k-grid-content {
+        min-height: 75px;
+    }
+
+    .k-grid-header .k-header {
+        overflow: visible !important;
+        white-space: normal !important;
+    }
+
+    .control-label {
+        font-size: small !important;
+        font-weight: 600 !important;
+        color: teal;
+    }
+
+    .input-sm {
+        font-size: 14px !important;
+    }
+
+    .k-grid tbody tr td {
+        font-size: small !important;
+        vertical-align: top;
+        overflow: visible !important;
+        white-space: normal !important;
+        word-wrap: break-word;
+    }
+
+    .k-list-container {
+        width: auto !important;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .customClass {
+        color: lightcoral;
+    }
+
+    .NotFoundcustomClass {
+        color: darkred;
+    }
+
+    #tabstrip h2 {
+        font-weight: lighter;
+        font-size: 5em;
+        line-height: 1;
+        padding: 0 0 0 30px;
+        margin: 0;
+    }
+
+        #tabstrip h2 span {
+            background: none;
+            padding-left: 5px;
+            font-size: .3em;
+            vertical-align: top;
+        }
+
+    #tabstrip p {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<section class="content-header">
+    <h1>
+        Search Reports
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="https://www.preventine.org/Reports/SearchReport">Reports</a></li>
+        <li class="active">Search Report</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="box box-info">
+<form action="https://www.preventine.org/Reports/SearchReport" class="form-horizontal" method="post"><input name="__RequestVerificationToken" type="hidden" value="DAn519dfomacrSrLzqLiTDZX-Vfwof3lMzsuNFWCQtWfz98q4AiIHZgqYfqD8QFpJAKjsBpldsl2NQkApM9qD9onAkRM6N_uCkqzdmSTzYM1">            <div class="row">
+                <div class="col-md-12">
+                    <div class="box-body">
+                        <div class="form-group">                           
+                            <div class="col-sm-2">
+                                <label class="control-label" for="PatientName">Patient Id</label>
+                                <span style="color:red">*</span>
+                                <input class="form-control input-sm" id="PatientName" name="PatientName" type="text" value="">
+                                <span class="field-validation-valid text-danger" data-valmsg-for="PatientName" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="col-sm-1">
+                                <br>
+                                <input id="btnSearch" value="Search" class="btn btn-primary">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 connectedSortable ui-sortable">
+                                <div class="k-widget k-grid" id="grid" style="height:450px;" data-role="grid"><div class="k-grid-header" style="padding-right: 17px;"><div class="k-grid-header-wrap k-auto-scrollable" data-role="resizable" style="touch-action: pan-y;"><table role="grid"><colgroup><col style="width:10px"><col style="width:40px"><col style="width:80px"><col style="width:40px"><col style="width:35px"><col style="width:35px"><col style="width:25px"></colgroup><thead role="rowgroup"><tr role="row"><th class="k-header" data-index="0" scope="col"><span class="k-link">#</span></th><th class="k-header" data-field="PatientID" data-index="1" data-title="Patient ID" scope="col" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=PatientID-asc">Patient ID</a></th><th class="k-header" data-field="PatientName" data-index="2" data-title="Patient Name" scope="col" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=PatientName-asc">Patient Name</a></th><th class="k-header" data-field="PackageName" data-index="3" data-title="Package Name" scope="col" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=PackageName-asc">Package Name</a></th><th class="k-header" data-field="RecordEntryDate" data-index="4" data-title="Record Entry Date" scope="col" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=RecordEntryDate-asc">Record Entry Date</a></th><th class="k-header" data-field="ReportDate" data-index="5" data-title="Report Date" scope="col" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=ReportDate-asc">Report Date</a></th><th class="k-header" data-field="ReportStage" data-index="6" data-title="Report Stage" scope="col" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=ReportStage-asc">Report Stage</a></th><th class="k-header" data-index="7" scope="col" style="display:none"><span class="k-link">Report</span></th><th class="k-header" data-index="8" scope="col" style="display:none"><span class="k-link">Report W/O Logo</span></th><th class="k-header" data-field="UniqueID" data-index="9" data-title="UID" scope="col" style="display:none" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=UniqueID-asc">UID</a></th><th class="k-header" data-field="PatientReportID" data-index="10" data-title="Patient Report ID" scope="col" style="display:none" data-role="columnsorter"><a class="k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo?grid-sort=PatientReportID-asc">Patient Report ID</a></th></tr><tr class="k-filter-row"><th>&nbsp;</th><th><span data-field="PatientID" class="k-filtercell" data-role="filtercell"><span class="k-operator-hidden"><span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default" style=""><input data-bind="value: value" data-role="autocomplete" data-text-field="PatientID" data-filter="startswith" data-delay="200" data-min-length="1" data-value-primitive="true" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" style="width: 100%;"><span class="k-icon k-loading" style="display:none"></span></span><button type="button" class="k-button k-button-icon" title="Clear" data-bind="visible:operatorVisible" style="display: none;"><span class="k-icon k-i-close"></span></button></span></span></th><th><span data-field="PatientName" class="k-filtercell" data-role="filtercell"><span class="k-operator-hidden"><span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default" style=""><input data-bind="value: value" data-role="autocomplete" data-text-field="PatientName" data-filter="startswith" data-delay="200" data-min-length="1" data-value-primitive="true" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" style="width: 100%;"><span class="k-icon k-loading" style="display:none"></span></span><button type="button" class="k-button k-button-icon" title="Clear" data-bind="visible:operatorVisible" style="display: none;"><span class="k-icon k-i-close"></span></button></span></span></th><th><span data-field="PackageName" class="k-filtercell" data-role="filtercell"><span class="k-operator-hidden"><span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default" style=""><input data-bind="value: value" data-role="autocomplete" data-text-field="PackageName" data-filter="startswith" data-delay="200" data-min-length="1" data-value-primitive="true" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" style="width: 100%;"><span class="k-icon k-loading" style="display:none"></span></span><button type="button" class="k-button k-button-icon" title="Clear" data-bind="visible:operatorVisible" style="display: none;"><span class="k-icon k-i-close"></span></button></span></span></th><th>&nbsp;</th><th>&nbsp;</th><th><span data-field="ReportStage" class="k-filtercell" data-role="filtercell"><span class="k-operator-hidden"><span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default" style=""><input data-bind="value: value" data-role="autocomplete" data-text-field="ReportStage" data-filter="startswith" data-delay="200" data-min-length="1" data-value-primitive="true" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" style="width: 100%;"><span class="k-icon k-loading" style="display:none"></span></span><button type="button" class="k-button k-button-icon" title="Clear" data-bind="visible:operatorVisible" style="display: none;"><span class="k-icon k-i-close"></span></button></span></span></th><th style="display: none;">&nbsp;</th><th style="display: none;">&nbsp;</th><th style="display: none;"><span data-field="UniqueID" class="k-filtercell" data-role="filtercell"><span class="k-operator-hidden"><span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default" style=""><input data-bind="value: value" data-role="autocomplete" data-text-field="UniqueID" data-filter="startswith" data-delay="200" data-min-length="1" data-value-primitive="true" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" style="width: 100%;"><span class="k-icon k-loading" style="display:none"></span></span><button type="button" class="k-button k-button-icon" title="Clear" data-bind="visible:operatorVisible" style="display: none;"><span class="k-icon k-i-close"></span></button></span></span></th><th style="display: none;"><span data-field="PatientReportID" class="k-filtercell" data-role="filtercell"><span><span class="k-widget k-numerictextbox" style=""><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" title="" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-bind="value: value" data-role="numerictextbox" role="spinbutton" style="display: none;" class="k-input" type="text" aria-valuenow="" aria-disabled="false" aria-readonly="false"><span class="k-select"><span unselectable="on" class="k-link" style="touch-action: pan-y;"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link" style="touch-action: pan-y;"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span><span title="" class="k-widget k-dropdown k-header k-dropdown-operator" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-busy="false" aria-activedescendant="20c7ff51-4ba1-4650-9cce-18b5ddfa5471" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Is equal to</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-filter">select</span></span></span><input class="k-dropdown-operator" data-bind="value: operator" data-role="dropdownlist" style="display: none;"></span><button type="button" class="k-button k-button-icon" title="Clear" data-bind="visible:operatorVisible" style="display: none;"><span class="k-icon k-i-close"></span></button></span></span></th></tr></thead></table></div></div><div class="k-grid-content" style="height: 334px;"><table role="grid" data-role="selectable" class="k-selectable" style="touch-action: pan-y;"><colgroup><col style="width:10px"><col style="width:40px"><col style="width:80px"><col style="width:40px"><col style="width:35px"><col style="width:35px"><col style="width:25px"></colgroup><tbody role="rowgroup"></tbody></table><div class="k-grid-content-expander" style="width: 1050px;"></div></div><div class="k-pager-wrap k-grid-pager k-widget k-floatwrap" data-role="pager"><a class="k-link k-pager-nav k-state-disabled k-pager-first" data-page="1" href="https://www.preventine.org/reports/SearchReport#" title="Go to the first page" tabindex="-1"><span class="k-icon k-i-seek-w">seek-w</span></a><a class="k-link k-pager-nav k-state-disabled" data-page="1" href="https://www.preventine.org/reports/SearchReport#" title="Go to the previous page" tabindex="-1"><span class="k-icon k-i-arrow-w">arrow-w</span></a><ul class="k-pager-numbers k-reset"><li class="k-current-page"><span class="k-link k-pager-nav">0</span></li><li><span class="k-state-selected">0</span></li></ul><a class="k-link k-pager-nav k-state-disabled" data-page="0" href="https://www.preventine.org/reports/SearchReport#" title="Go to the next page" tabindex="-1"><span class="k-icon k-i-arrow-e">arrow-e</span></a><a class="k-link k-pager-nav k-state-disabled k-pager-last" data-page="0" href="https://www.preventine.org/reports/SearchReport#" title="Go to the last page" tabindex="-1"><span class="k-icon k-i-seek-e">seek-e</span></a><span class="k-pager-sizes k-label"><span title="" style="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-busy="false" aria-activedescendant="69df97dc-bb7c-4aa7-b19d-7ca15b2619b3"><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">10</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select data-role="dropdownlist" style="display: none;"><option value="10">10</option><option value="20">20</option><option value="30">30</option><option value="50">50</option></select></span>items per page</span><a class="k-pager-refresh k-link" href="https://www.preventine.org/Reports/SearchReport_Complete_ForKendo" title="Refresh"><span class="k-icon k-i-refresh">Refresh</span></a><span class="k-pager-info k-label">No items to display</span></div></div><script>
+	jQuery(function(){jQuery("#grid").kendoGrid({"dataBound":ResetRowNumber,"columns":[{"title":"#","width":"10px","template":"#= RenderNumber() #"},{"title":"Patient ID","width":"40px","field":"PatientID","filterable":{"cell":{"showOperators":false}},"encoded":true},{"title":"Patient Name","width":"80px","field":"PatientName","filterable":{"cell":{"showOperators":false}},"encoded":true},{"title":"Package Name","width":"40px","field":"PackageName","filterable":{"cell":{"showOperators":false}},"encoded":true},{"title":"Record Entry Date","width":"35px","field":"RecordEntryDate","format":"{0:dd/MM/yyyy hh:mm:ss tt}","filterable":false,"encoded":true},{"title":"Report Date","width":"35px","field":"ReportDate","format":"{0:dd/MM/yyyy hh:mm:ss tt}","filterable":false,"encoded":true},{"title":"Report Stage","width":"25px","field":"ReportStage","filterable":{"cell":{"showOperators":false}},"encoded":true},{"title":"Report","hidden":true,"width":"30px","template":"\u003ca target=\u0027_blank\u0027 data-toggle=\u0027tooltip\u0027 title=\u0027Report With Logo\u0027 href=\u0027/Reports/DownloadReport/#=PatientReportID#?FilePath=#=Reportpath#\u0026location=#=FtpLocation#\u0027 \u003e\u003ci class=\u0027fa fa-file-pdf-o\u0027\u003e\u003c/i\u003e\u003c/a\u003e# if (AbsReportPath != null) { #  \u003ca target=\u0027_blank\u0027 data-toggle=\u0027tooltip\u0027 title=\u0027Abstract Report With Logo\u0027 href=\u0027/Reports/DownloadReport/#=PatientReportID#?FilePath=#=AbsReportPath#\u0026location=#=FtpLocation#\u0027 \u003e\u003ci class=\u0027fa fa-file\u0027\u003e\u003c/i\u003e\u003c/a\u003e# } #"},{"title":"Report W/O Logo","hidden":true,"width":"30px","template":"\u003ca target=\u0027_blank\u0027 data-toggle=\u0027tooltip\u0027 title=\u0027Report W/O Logo\u0027 href=\u0027/Reports/DownloadReport/#=PatientReportID#?FilePath=#=Reportpathclient#\u0026location=#=FtpLocation#\u0027 \u003e\u003ci class=\u0027fa fa-file-pdf-o\u0027\u003e\u003c/i\u003e\u003c/a\u003e# if (AbsReportPathClient != null) { #  \u003ca target=\u0027_blank\u0027 data-toggle=\u0027tooltip\u0027 title=\u0027Abstract Report W/O Logo\u0027 href=\u0027/Reports/DownloadReport/#=PatientReportID#?FilePath=#=AbsReportPathClient#\u0026location=#=FtpLocation#\u0027 \u003e\u003ci class=\u0027fa fa-file\u0027\u003e\u003c/i\u003e\u003c/a\u003e# } #"},{"title":"UID","hidden":true,"width":"10px","field":"UniqueID","filterable":{"cell":{"showOperators":false}},"encoded":true},{"title":"Patient Report ID","hidden":true,"field":"PatientReportID","filterable":{},"encoded":true}],"pageable":{"refresh":true,"pageSizes":[10,20,30,50],"buttonCount":10},"sortable":true,"selectable":"Single, Row","filterable":{"mode":"row","operators":{"string":{"contains":"Contains","eq":"Is equal to"}}},"resizable":true,"dataSource":{"type":(function(){if(kendo.data.transports['aspnetmvc-ajax']){return 'aspnetmvc-ajax';} else{throw new Error('The kendo.aspnetmvc.min.js script is not included.');}})(),"transport":{"read":{"url":"/Reports/SearchReport_Complete_ForKendo","data":getData},"prefix":""},"pageSize":10,"page":1,"total":0,"schema":{"data":"Data","total":"Total","errors":"Errors","model":{"id":"PatientID","fields":{"ClientId":{"type":"string"},"Age":{"type":"string"},"sex":{"type":"string"},"PatientReportID":{"type":"number"},"iPatientId":{"type":"number"},"PatientID":{"type":"string"},"PatientName":{"type":"string"},"Barcode":{"type":"string"},"CollectionDate":{"type":"date","defaultValue":null},"ReportDate":{"type":"date","defaultValue":null},"PackageId":{"type":"number","defaultValue":null},"PackageName":{"type":"string"},"ReportCount":{"type":"string"},"Reportpath":{"type":"string"},"ReportName":{"type":"string"},"Reportpathclient":{"type":"string"},"ReportStage":{"type":"string"},"ReportType":{"type":"string"},"UniqueID":{"type":"string"},"ReportUniqueId":{"type":"string"},"Clientcode":{"type":"string"},"MRP":{"type":"number"},"AmountCollected":{"type":"number"},"CurrentPendingAmount":{"type":"number"},"AmountPending":{"type":"number"},"Discount":{"type":"number"},"PaymentStatus":{"type":"string"},"ToDate":{"type":"date","defaultValue":null},"FromDate":{"type":"date","defaultValue":null},"FranchiseId":{"type":"number","defaultValue":null},"CentreLoginId":{"type":"number","defaultValue":null},"SampleKitNo":{"type":"string"},"DiagnosticTestName":{"type":"string"},"DiagnosticTestId":{"type":"number"},"RecordEntryDate":{"type":"date","defaultValue":null},"StatusName":{"type":"string"},"ICMRId":{"type":"string"},"InvoiceID":{"type":"string"},"CreatedOn":{"type":"string"},"CreatedBy":{"type":"string"},"Comment":{"type":"string"},"AddNewPayment":{"type":"number"},"NewPayment":{"type":"number"},"FinalPayment":{"type":"boolean"},"DiscountGiven":{"type":"number"},"FtpLocation":{"type":"string"},"AbsReportPath":{"type":"string"},"AbsReportPathClient":{"type":"string"},"IsPartialReportRequested":{"type":"number"},"PartialReportRequestedOn":{"type":"date","defaultValue":null},"ReportNameAlt":{"type":"string"}}}}}});});
+</script>
+                              
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+</form>    </div>
+</section>
+
+<script>
+
+    $(document).keypress(function (e) { if (e.keyCode == 13) { e.preventDefault(); return false; } }); // To avoid entire page refresh on pressing Enter
+
+    function showInvoice_CompleteGrid(uniqueId) {
+        var url = '/Reports/Invoice' + '?UniqueId=' + uniqueId;
+
+        popup = window.open(url, "mywindow", "location=1,status=1,scrollbars=1, width=800,height=500");
+        popup.focus();
+    }
+
+    function showInvoice_PartialGrid(e) {
+        var dataItem = $("#gridPartialReport").data("kendoGrid").dataItem(e.target.closest("tr"));
+        var uniqueId = dataItem.UniqueID;
+        var url = '/Reports/Invoice' + '?UniqueId=' + uniqueId;
+
+        popup = window.open(url, "mywindow", "location=1,status=1,scrollbars=1, width=800,height=500");
+        popup.focus();
+    }
+
+    function selection_change() {
+        var grid = this;
+        var selectedRows = grid.select();
+        var selectedDataItems = $.map(selectedRows,
+            function (row) {
+                return grid.dataItem(row);
+            });
+        $("form").find("[name=SAMPLE_KIT_NO]").remove();
+        for (var i = 0; i < selectedDataItems.length; i++) {
+            $('<input type="hidden" name="SAMPLE_KIT_NO" />')
+                .val(selectedDataItems[i].SAMPLE_KIT_NO)
+                .appendTo("form");
+        }
+        var selectedProductNames = $.map(selectedDataItems,
+            function (dataItem) {
+                return dataItem.ProductName;
+            });
+        $("#selectedPatientIds").text(selectedProductNames.join(", "));
+    }
+
+    function getData() {
+        return {
+            barcode: $("#PatientName").val()
+        };
+    }
+
+    $("#btnSearch").bind("click", function () {
+        displayProgressBar(true);
+        $("#grid").data("kendoGrid").dataSource.read();
+        $("#grid").data("kendoGrid").refresh();
+        $("#grid").data("kendoGrid").dataSource.page(1);
+        displayProgressBar(false);
+    });
+    function displayProgressBar(display) {
+        kendo.ui.progress($("#form1"), display);
+    }
+</script>
+
+            </div>
+
+            <footer class="main-footer" style="padding:1px !important">
+                <p>
+                    © 2021 - PreventiNe Life Care Pvt. Ltd.
+                    <a href="https://play.google.com/store/apps/details?id=com.preventine.gdfapp" style="float:right" target="GDFAppDownload">
+                        <img src="./PLIMS Search Reports_files/getItOnGooglePlayjpg.jpg" alt="GD Franchise App" width="113" height="33">
+                    </a>
+                </p>
+            </footer>
+            <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+        </div>
+    
+
+    
+    <script src="./PLIMS Search Reports_files/bootstrap"></script>
+
+    <script src="./PLIMS Search Reports_files/kendoalljs"></script>
+
+    
+    <script src="./PLIMS Search Reports_files/Custom.js.download"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $(".search-menu-box").on('input', function () {
+                var filter = $(this).val();
+                $(".sidebar-menu > li").each(function () {
+                    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                        $(this).hide();
+                    } else {
+                        $(this).show();
+                    }
+                });
+            });
+            var url = window.location.href.split('#');
+            $('ul.sidebar-menu a').filter(function () {
+                return this.href == url;
+            }).parent().addClass('active');
+
+            $('ul.treeview-menu a').filter(function () {
+                return this.href == url;
+            }).closest('.treeview').addClass('active al');
+
+            //if (url.pathname.split('/')[2] == "PlaceNewOrder") {
+            //    $('li.co a').parent().addClass('active');
+            //    $('li.co a').parent().parent().parent().addClass('active al');
+            //}
+            //if (url.pathname.split('/')[2] == "NewPaymentsVerify") {
+            //    $('li.cp a').parent().addClass('active').closest('.treeview').addClass('active al');
+            //}
+            //if (url.pathname.split('/')[1] == "ReportsAdmin") {
+            //    $('li.ra a').parent().addClass('active').closest('.treeview').addClass('active al');
+            //}
+
+            //$('.treeview').hover(function () {
+            //    if (!$(this).hasClass('al')) {
+            //        $(this).addClass('active');
+            //    }
+            //}, function () {
+            //    if (!$(this).hasClass('al')) {
+            //        $(this).removeClass('active');
+            //    }
+            //});
+        });
+       
+    </script>
+
+
+<div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="off" data-role="staticlist" role="listbox"><li tabindex="-1" role="option" unselectable="on" class="k-item k-state-selected k-state-focused" aria-selected="true" data-offset-index="0" id="69df97dc-bb7c-4aa7-b19d-7ca15b2619b3">10</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="1">20</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="2">30</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="3">50</li></ul></div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="polite" data-role="staticlist" role="listbox"></ul></div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="polite" data-role="staticlist" role="listbox"></ul></div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="polite" data-role="staticlist" role="listbox"></ul></div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="polite" data-role="staticlist" role="listbox"></ul></div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="polite" data-role="staticlist" role="listbox"></ul></div></div><div class="k-list-container k-popup k-group k-reset" data-role="popup" style="display: none; position: absolute;"><div class="k-group-header" style="display:none"></div><div class="k-list-scroller" unselectable="on"><ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" aria-live="off" data-role="staticlist" role="listbox"><li tabindex="-1" role="option" unselectable="on" class="k-item k-state-focused k-state-selected" data-offset-index="0" id="20c7ff51-4ba1-4650-9cce-18b5ddfa5471" aria-selected="true">Is equal to</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="1">Is not equal to</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="2">Is greater than or equal to</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="3">Is greater than</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="4">Is less than or equal to</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="5">Is less than</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="6">Is null</li><li tabindex="-1" role="option" unselectable="on" class="k-item" data-offset-index="7">Is not null</li></ul></div></div></body></html>

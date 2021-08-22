@@ -1,0 +1,21 @@
+﻿var srNo = 1;
+$(document).on("click", "#selectAll", function () {
+    $("#grid tbody input:checkbox").attr("checked", this.checked);
+});
+$(document).on("click", "#selectAll", function () {
+    $("#grid tbody input:checkbox").attr("checked", this.checked);
+});
+
+function RenderNumber() {
+    //return ++srNo;
+    //var page = parseInt($("#grid").data("kendoGrid").dataSource.page()) - 1;
+    //var pagesize = $("#grid").data("kendoGrid").dataSource.pageSize();
+    var page = parseInt($("div[data-role='grid']").data("kendoGrid").dataSource.page()) - 1;
+    var pagesize = $("div[data-role='grid']").data("kendoGrid").dataSource.pageSize();        
+    var value = parseInt(srNo + (parseInt(page) * parseInt(pagesize)));
+    srNo++;
+    return value;
+}
+function ResetRowNumber(data) {
+    srNo = 1;
+}
